@@ -18,7 +18,7 @@ Single page application to list tasks within columns.
 
 ## Listing Tasks
 
-GET: http://localhost:8080/plannor4-rest/rest/API/tasks/list
+GET: http://localhost:8080/tasksystem/API/tasks/list
 
 Expected output:
 
@@ -113,7 +113,7 @@ Expected output:
 
 ## Listing Persons
 
-GET: http://localhost:8080/plannor4-rest/rest/API/persons/list
+GET: http://localhost:8080/tasksystem/API/persons/list
 
 Expected output:
 
@@ -144,7 +144,7 @@ Expected output:
 
 ## Listing Tags
 
-GET: http://localhost:8080/plannor4-rest/rest/API/tags/list
+GET: http://localhost:8080/tasksystem/API/tags/list
 
 Expected output:
 
@@ -178,7 +178,7 @@ Expected output:
 ```
 ## Listing Columns
 
-GET: http://localhost:8080/plannor4-rest/rest/API/tags/list
+GET: http://localhost:8080/tasksystem/API/tags/list
 
 Expected output:
 
