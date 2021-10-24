@@ -2,19 +2,21 @@
 
 Single page application to list tasks within columns.
 
-# Page Layout
+# General Layout
+
+## Page Layout
 
 ![image](https://user-images.githubusercontent.com/9665358/138611156-754b484e-d37a-461e-9686-cc8b7fce0683.png)
 
-# Column Layout
+## Column Layout
 
 ![image](https://user-images.githubusercontent.com/9665358/138611168-dfccc4b6-7091-4e6b-8b18-dc27826bb0ec.png)
 
-# Task Layout
+## Task Layout
 
 ![image](https://user-images.githubusercontent.com/9665358/138611198-2d780045-6a3d-42b9-953c-923535f2b2cd.png)
 
-# API
+# REST API
 
 ## Listing Tasks
 
