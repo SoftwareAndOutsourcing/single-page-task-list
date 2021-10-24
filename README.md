@@ -248,3 +248,7 @@ Expected output:
   }
 ]
 ```
+
+# Expected behaviour
+
+On the page load, the `Columns list` is retrieved and each column is build. After that, the `Task list` is retrieved. Each task is assigned to one or more columns in which the filter matches. If a task is not assigned to any column, it is assigned to the last "Not filtered" column.
