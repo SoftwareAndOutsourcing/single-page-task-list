@@ -18,101 +18,6 @@ Single page application to list tasks within columns.
 
 # REST API
 
-## Listing Tasks
-
-GET: http://localhost:8080/tasksystem/API/tasks/list
-
-Expected output:
-
-```json
-[
-  {
-    "id": "71a55ff1-704c-4657-81e6-d841720616d6",
-    "title": "commodo libero ",
-    "description": "suscipitEtiam quam sem tristique nec ex ut vestibulum posuere nisl Nulla rutrum urna sit ",
-    "deadline": 1637748000000,
-    "assignee": {
-      "id": "968fd609-603b-4516-85af-dbfc4294a980",
-      "name": "John Smith"
-    },
-    "tags": [
-      {
-        "id": "37d6e6e3-f865-45dc-8ff1-83124ca3bff6",
-        "identifier": "Routine",
-        "labelColor": "black",
-        "backgroundColor": "yellow"
-      }
-    ]
-  },
-  {
-    "id": "8f0661e0-789f-419d-b41b-5ff94a7cf8ac",
-    "title": "mauris neque ",
-    "description": "sit amet mauris feugiat lobortis Mauris felis purus ultrices non orci non finibus malesuada tellus ",
-    "deadline": 1637776800000,
-    "assignee": {
-      "id": "e65e6380-7765-401d-8da1-0374ae130db7",
-      "name": "Priscilla Nascer"
-    },
-    "tags": [
-      {
-        "id": "37d6e6e3-f865-45dc-8ff1-83124ca3bff6",
-        "identifier": "Routine",
-        "labelColor": "black",
-        "backgroundColor": "yellow"
-      },
-      {
-        "id": "ff19ad56-10ff-4bbc-96d2-794ebd9d6974",
-        "identifier": "New Projects",
-        "labelColor": "white",
-        "backgroundColor": "red"
-      }
-    ]
-  },
-  {
-    "id": "c8843b87-aece-41ac-8f5f-a9b58ee94f77",
-    "title": "vestibulum sem Interdum et malesuada ",
-    "description": "felis Donec ultricies sem quis tempus pretium massa turpis molestie leo dictum turpis lectus sed ",
-    "deadline": 1637694000000,
-    "assignee": {
-      "id": "e65e6380-7765-401d-8da1-0374ae130db7",
-      "name": "Priscilla Nascer"
-    },
-    "tags": [
-      {
-        "id": "ff19ad56-10ff-4bbc-96d2-794ebd9d6974",
-        "identifier": "New Projects",
-        "labelColor": "white",
-        "backgroundColor": "red"
-      },
-      {
-        "id": "37d6e6e3-f865-45dc-8ff1-83124ca3bff6",
-        "identifier": "Routine",
-        "labelColor": "black",
-        "backgroundColor": "yellow"
-      }
-    ]
-  },
-  {
-    "id": "21791077-3487-4fc9-ac73-0c06750ea164",
-    "title": "ipsum Sed dignissim libero ",
-    "description": "sem tristique nec ex ut vestibulum posuere nisl Nulla rutrum ",
-    "deadline": 1637690400000,
-    "assignee": {
-      "id": "968fd609-603b-4516-85af-dbfc4294a980",
-      "name": "John Smith"
-    },
-    "tags": [
-      {
-        "id": "ff19ad56-10ff-4bbc-96d2-794ebd9d6974",
-        "identifier": "New Projects",
-        "labelColor": "white",
-        "backgroundColor": "red"
-      }
-    ]
-  }
-]
-```
-
 ## Listing Persons
 
 GET: http://localhost:8080/tasksystem/API/persons/list
@@ -245,6 +150,101 @@ Expected output:
       "assignees": [],
       "deadlineInDays": -1
     }
+  }
+]
+```
+
+## Listing Tasks
+
+GET: http://localhost:8080/tasksystem/API/tasks/list
+
+Expected output:
+
+```json
+[
+  {
+    "id": "71a55ff1-704c-4657-81e6-d841720616d6",
+    "title": "commodo libero ",
+    "description": "suscipitEtiam quam sem tristique nec ex ut vestibulum posuere nisl Nulla rutrum urna sit ",
+    "deadline": 1637748000000,
+    "assignee": {
+      "id": "968fd609-603b-4516-85af-dbfc4294a980",
+      "name": "John Smith"
+    },
+    "tags": [
+      {
+        "id": "37d6e6e3-f865-45dc-8ff1-83124ca3bff6",
+        "identifier": "Routine",
+        "labelColor": "black",
+        "backgroundColor": "yellow"
+      }
+    ]
+  },
+  {
+    "id": "8f0661e0-789f-419d-b41b-5ff94a7cf8ac",
+    "title": "mauris neque ",
+    "description": "sit amet mauris feugiat lobortis Mauris felis purus ultrices non orci non finibus malesuada tellus ",
+    "deadline": 1637776800000,
+    "assignee": {
+      "id": "e65e6380-7765-401d-8da1-0374ae130db7",
+      "name": "Priscilla Nascer"
+    },
+    "tags": [
+      {
+        "id": "37d6e6e3-f865-45dc-8ff1-83124ca3bff6",
+        "identifier": "Routine",
+        "labelColor": "black",
+        "backgroundColor": "yellow"
+      },
+      {
+        "id": "ff19ad56-10ff-4bbc-96d2-794ebd9d6974",
+        "identifier": "New Projects",
+        "labelColor": "white",
+        "backgroundColor": "red"
+      }
+    ]
+  },
+  {
+    "id": "c8843b87-aece-41ac-8f5f-a9b58ee94f77",
+    "title": "vestibulum sem Interdum et malesuada ",
+    "description": "felis Donec ultricies sem quis tempus pretium massa turpis molestie leo dictum turpis lectus sed ",
+    "deadline": 1637694000000,
+    "assignee": {
+      "id": "e65e6380-7765-401d-8da1-0374ae130db7",
+      "name": "Priscilla Nascer"
+    },
+    "tags": [
+      {
+        "id": "ff19ad56-10ff-4bbc-96d2-794ebd9d6974",
+        "identifier": "New Projects",
+        "labelColor": "white",
+        "backgroundColor": "red"
+      },
+      {
+        "id": "37d6e6e3-f865-45dc-8ff1-83124ca3bff6",
+        "identifier": "Routine",
+        "labelColor": "black",
+        "backgroundColor": "yellow"
+      }
+    ]
+  },
+  {
+    "id": "21791077-3487-4fc9-ac73-0c06750ea164",
+    "title": "ipsum Sed dignissim libero ",
+    "description": "sem tristique nec ex ut vestibulum posuere nisl Nulla rutrum ",
+    "deadline": 1637690400000,
+    "assignee": {
+      "id": "968fd609-603b-4516-85af-dbfc4294a980",
+      "name": "John Smith"
+    },
+    "tags": [
+      {
+        "id": "ff19ad56-10ff-4bbc-96d2-794ebd9d6974",
+        "identifier": "New Projects",
+        "labelColor": "white",
+        "backgroundColor": "red"
+      }
+    ]
   }
 ]
 ```
