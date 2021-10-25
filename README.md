@@ -249,6 +249,53 @@ Expected output:
 ]
 ```
 
+A larger example of task output with 100 Tasks can be find [here](100-tasks.json)
+
+## Finding entities by ID
+
+### Finding Task by id 
+
+GET: http://localhost:8080/tasksystem/rest/API/tasks/ac92ada4-ef24-4c8c-bc23-aa873bb142d5
+
+Expected output:
+
+```json
+{
+  "id": "ac92ada4-ef24-4c8c-bc23-aa873bb142d5",
+  "title": "eu euismod nulla Nunc ",
+  "description": "sed vestibulum dolor Fusce felis ex cursus at est quis maximus aliquet ",
+  "deadline": 1637776800000,
+  "assignee": {
+    "id": "c3230cee-ad92-4e9e-a45f-42fd443253be",
+    "name": "Priscilla Nascer"
+  },
+  "tags": [
+    {
+      "id": "a03f81bc-be63-46c9-b99f-9d682f5b8cf6",
+      "identifier": "Training",
+      "labelColor": "white",
+      "backgroundColor": "orange"
+    }
+  ]
+}
+```
+
+### Finding Tags, Columns and Persons by id 
+
+Tags, Persons and Columns can be retrieved by id in the same way as done for Tasks:
+
+Tags:
+
+GET http://localhost:8080/tasksystem/rest/API/tags/1e476bd2-3f5d-43b3-b498-fac7ab6a5fa8
+
+Columns:
+
+GET http://localhost:8080/tasksystem/rest/API/columns/9a112e2f-3833-4fca-ab63-168a807960a4
+
+Persons:
+
+GET http://localhost:8080/tasksystem/rest/API/persons/c99f164b-f105-4feb-9910-839c5eb3d81c
+
 # Expected behaviour
 
 On the page load, the `Columns list` is retrieved and each column is build. After that, the `Task list` is retrieved. Each task is assigned to one or more columns in which the filter matches. If a task is not assigned to any column, it is assigned to the last "Not filtered" column.
