@@ -2,13 +2,13 @@
 
 Single page application to list tasks within columns.
 
-- Page General Layout
-- REST API
-  - Listing Entities
-  - Finding entities by ID
-  - Update & Create Columns
-- Expected behaviour
-- Bonus feature (optional)
+- [Page General Layout](#general-layout)
+- [REST API](#rest-api)
+  - [Listing Entities]
+  - [Finding entities by ID]
+  - [Update & Create Columns]
+- [Expected behaviour]
+- [Bonus feature (optional)]
 
 # General Layout
 
