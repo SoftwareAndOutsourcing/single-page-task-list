@@ -296,12 +296,54 @@ Persons:
 
 GET http://localhost:8080/tasksystem/rest/API/persons/c99f164b-f105-4feb-9910-839c5eb3d81c
 
-## Update Column
+## Update & Create Columns
+
+### Create Column 
+
+POST http://localhost:8080/tasksystem/rest/API/columns/create
+
+FORM fields examples:
+
+"title": "My column title"                                                                    # new column title
+
+Expected output:
+
+```json
+{"result":"success"}
+```
 
 ### Update Column Filter
 
 POST http://localhost:8080/tasksystem/rest/API/columns/update/filter
- 
+
+FORM fields examples:
+
+"column_id": "0eb22337-4d8b-4214-a2a5-9df314f320d7"                                              # column's id
+"title_contains": "test 123"                                                                     # query text to match task title
+"assignees_list": "fd161b43-226b-4051-88f2-8f67110c35ed, d35e4d6a-6e69-4ce5-a435-f1dfa6b36181"   # comma-separated list of assignees ids
+"tags_list": "628c4fd4-6648-4c8b-befa-c39221a9eb9c",                                             # comma-separated list of tags ids
+"deadline": "15"                                                                                 # integer representing amount of days ahead
+
+Expected output:
+
+```json
+{"result":"success"}
+```
+
+### Update Column Title
+
+POST http://localhost:8080/tasksystem/rest/API/columns/update/title
+
+FORM fields examples:
+
+"column_id": "0eb22337-4d8b-4214-a2a5-9df314f320d7"                                              # column's id
+"title": "A motivating title"                                                                    # new column title
+
+Expected output:
+
+```json
+{"result":"success"}
+```
 
 # Expected behaviour
 
