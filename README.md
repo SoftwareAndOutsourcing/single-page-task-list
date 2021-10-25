@@ -2,6 +2,14 @@
 
 Single page application to list tasks within columns.
 
+- Page General Layout
+- REST API
+  - Listing Entities
+  - Finding entities by ID
+  - Update & Create Columns
+- Expected behaviour
+- Bonus feature (optional)
+
 # General Layout
 
 ## Page Layout
@@ -18,7 +26,9 @@ Single page application to list tasks within columns.
 
 # REST API
 
-## Listing Persons
+## Listing Entities
+
+### Listing Persons
 
 GET: http://localhost:8080/tasksystem/API/persons/list
 
@@ -49,7 +59,7 @@ Expected output:
 ]
 ```
 
-## Listing Tags
+### Listing Tags
 
 GET: http://localhost:8080/tasksystem/API/tags/list
 
@@ -83,7 +93,7 @@ Expected output:
   }
 ]
 ```
-## Listing Columns
+### Listing Columns
 
 GET: http://localhost:8080/tasksystem/API/tags/list
 
@@ -154,7 +164,7 @@ Expected output:
 ]
 ```
 
-## Listing Tasks
+### Listing Tasks
 
 GET: http://localhost:8080/tasksystem/API/tasks/list
 
