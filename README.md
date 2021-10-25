@@ -24,6 +24,10 @@ Single page application to list tasks within columns.
 
 ![image](https://user-images.githubusercontent.com/9665358/138611198-2d780045-6a3d-42b9-953c-923535f2b2cd.png)
 
+## Column Filter Layout
+
+![image](https://user-images.githubusercontent.com/9665358/138697052-5f1b1202-3dd7-4a13-9d79-5d71a946f782.png)
+
 # REST API
 
 ## Listing Entities
