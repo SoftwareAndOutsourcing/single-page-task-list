@@ -256,3 +256,17 @@ On the page load, the `Columns list` is retrieved and each column is build. Afte
 # Bonus feature (optional)
 
 Sorting columns by drag-in-drop them in the columns area.
+
+To perform this action, the javascript sort event need to call the API as exemplified below:
+
+GET http://localhost:8080/tasksystem/rest/API/columns/swap?from=0&to=2
+
+to swap columns 0 & 2.
+
+This call would result something like:
+
+```json
+{"result":"success"}
+```
+
+In case of any result than `success`, the new columns sorting must be undone, popuping the user about that.
