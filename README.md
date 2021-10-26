@@ -54,7 +54,7 @@ The options are:
 - using pure CSS 
 - Bootstrap.
 
-The main concern here is **structuring the screen in order to make replace the style easier*.
+The main concern here is **structuring the screen in order to make replace the style easier**.
 
 ## Documentation & code standards
 
