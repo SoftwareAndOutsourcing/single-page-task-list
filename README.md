@@ -12,7 +12,7 @@ Single page application to list tasks within columns.
 
 # General Layout
 
-## Page Layout
+## Page General Layout
 
 ![image](https://user-images.githubusercontent.com/9665358/138611156-754b484e-d37a-461e-9686-cc8b7fce0683.png)
 
