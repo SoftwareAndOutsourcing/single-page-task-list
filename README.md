@@ -3,12 +3,13 @@
 Single page application to list tasks within columns.
 
 - [Page General Layout](#general-layout)
+- [Expected behaviour](#expected-behaviour)
+- [Technologies & libraries](#technologies--libraries)
+- [Bonus feature (optional)](#bonus-feature-optional)
 - [REST API](#rest-api)
   - [Listing Entities](#listing-entities)
   - [Finding entities by ID](#finding-entities-by-id)
   - [Update & Create Columns](#update--create-columns)
-- [Expected behaviour](#expected-behaviour)
-- [Bonus feature (optional)](#bonus-feature-optional)
 
 # General Layout
 
@@ -27,6 +28,55 @@ Single page application to list tasks within columns.
 ## Column Filter Layout
 
 ![image](https://user-images.githubusercontent.com/9665358/138697052-5f1b1202-3dd7-4a13-9d79-5d71a946f782.png)
+
+# Expected behaviour
+
+On the page load, the `Columns list` is retrieved and each column is build. After that, the `Task list` is retrieved. Each task is assigned to one or more columns in which the filter matches. If a task is not assigned to any column, it is assigned to the last "Not filtered" column.
+
+## Technologies & libraries
+
+In addition to HTML 5, please follow the following tech options:
+
+### Coding
+
+It is expected to implement this form using one of the following options:
+
+- pure JavaScript or
+- pure JavaScript + TypeScript or
+- vue.js
+
+It is noteworthly that no serverside code is assumed to be present in this project. Any backend interaction must be performed via REST API.
+
+### Styling
+
+The options are:
+
+- using pure CSS 
+- Bootstrap.
+
+The main concern here is **structuring the screen in order to make replace the style easier*.
+
+## Documentation & code standards
+
+No documentation is required. The code must be clean, readable and understandable per si. If you think something is tricky, do not hesitate to put a inline/multiline explanatory comentary. In general, we adopt Google JavaScript [Format Style](https://google.github.io/styleguide/jsguide.html#formatting), [Language Features](https://google.github.io/styleguide/jsguide.html#language-features) and [Naming Conventions](https://google.github.io/styleguide/jsguide.html#naming) as a guideline.
+
+# Bonus feature (optional)
+
+Sorting columns by drag-in-drop them in the columns area.
+
+To perform this action, the javascript sort event need to call the API as exemplified below:
+
+GET http://localhost:8080/tasksystem/rest/API/columns/swap?from=0&to=2
+
+to swap columns 0 & 2.
+
+This call would result something like:
+
+```json
+{"result":"success"}
+```
+
+In case of any result than `success`, the new columns sorting must be undone, popuping the user about that.
 
 # REST API
 
@@ -358,25 +408,3 @@ Expected output:
 ```json
 {"result":"success"}
 ```
-
-# Expected behaviour
-
-On the page load, the `Columns list` is retrieved and each column is build. After that, the `Task list` is retrieved. Each task is assigned to one or more columns in which the filter matches. If a task is not assigned to any column, it is assigned to the last "Not filtered" column.
-
-# Bonus feature (optional)
-
-Sorting columns by drag-in-drop them in the columns area.
-
-To perform this action, the javascript sort event need to call the API as exemplified below:
-
-GET http://localhost:8080/tasksystem/rest/API/columns/swap?from=0&to=2
-
-to swap columns 0 & 2.
-
-This call would result something like:
-
-```json
-{"result":"success"}
-```
-
-In case of any result than `success`, the new columns sorting must be undone, popuping the user about that.
