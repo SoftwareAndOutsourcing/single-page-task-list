@@ -6,11 +6,18 @@ import columns from '../mockdata/columns_and_tasks.json';
 
 const bars = icon(faBars).html.toString();
 
-const getNav = (title: string, icon: string) =>
-  /*html*/`<nav class="navbar p-1">
+const getNav = (title: string, icon: string, hasFilter = false) => {
+  let modalAttributes = '';
+  if (hasFilter) {
+    modalAttributes = ` data-bs-toggle="modal"
+      data-bs-target="#filterModal"`
+  }
+
+  return /*html*/`<nav class="navbar p-1">
     <span class="text-start">${title}</span>
-    <span class="ms-auto">${icon}</span>
+    <span class="ms-auto"${modalAttributes}>${icon}</span>
   </nav>`;
+}
 
 const getColumns = (columns: any[], icon: string) => {
   let html = '';
@@ -22,10 +29,8 @@ const getColumns = (columns: any[], icon: string) => {
 
 const getColumn = (column: { [key: string]: any }, icon: string) => {
   return /*html*/`<div class="col">
-    <div class="bg-primary"
-       data-bs-toggle="modal"
-       data-bs-target="#exampleModal">
-      ${getNav(column.title, icon)}
+    <div class="bg-primary">
+      ${getNav(column.title, icon, true)}
       ${getTasks(column.filteredTasks, icon)}
     </div>
   </div>`
