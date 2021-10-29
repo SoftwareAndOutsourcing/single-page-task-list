@@ -1,0 +1,15 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.tasks {
+  height: 25em;
+  overflow: auto;
+
+  .task {
+    @extend .border;
+    @extend .m-2;
+
+    &:first-child {
+      @extend .mt-0;
+    }
+  }
+}
