@@ -29,7 +29,7 @@ const getColumns = (columns: any[], icon: string) => {
 
 const getColumn = (column: { [key: string]: any }, icon: string) => {
   return /*html*/`<div class="col">
-    <div class="bg-primary">
+    <div class="column">
       ${getNav(column.title, icon, true)}
       ${getTasks(column.filteredTasks, icon)}
     </div>
@@ -66,14 +66,14 @@ const formatDate = (ts: number) => {
 const getTask = (task: { [key: string]: any }, icon: string) =>
   /*html*/`<div class="task">
     ${getNav(task.title, icon)}    
-    <div class="border-top p-1">
+    <div class="task-deadline p-1">
       <span>${formatDate(task.deadline)}</span>
       <span class="badge bg-info float-end">Field X</span>
     </div>
-    <div class="border-top p-1">
+    <div class="task-description border-top p-1">
       ${task.description}
     </div>
-    <div class="border-top p-1">
+    <div class="task-tags border-top p-1">
       ${getTags(task.tags)}
     </div>
   </div>`;

@@ -1,17 +1,62 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-.tasks {
-  height: 25em;
-  overflow: auto;
+.header {
+  @extend .text-white;
+  @extend .bg-primary;
+}
 
-  .task {
-    @extend .border;
-    @extend .m-2;
+.view-name {
+  @extend .text-white;
+  @extend .bg-primary;
+}
 
-    &:first-child {
-      @extend .mt-0;
+.column {
+  @extend .text-white;
+  @extend .bg-primary;
+
+  nav {
+    @extend .text-white;
+    @extend .bg-primary;
+  }
+
+  .tasks {
+    height: 25em;
+    overflow: auto;
+
+    nav {
+      @extend .text-white;
+      @extend .bg-primary;
+    }
+
+    .task {
+      @extend .border;
+      @extend .m-2;
+
+      &:first-child {
+        @extend .mt-0;
+      }
+
+      &-deadline {
+        @extend .text-white;
+        @extend .bg-primary;
+      }
+      
+      &-description {
+        @extend .text-white;
+        @extend .bg-primary;
+      }
+
+      &-tags {
+        @extend .text-white;
+        @extend .bg-primary;
+      }      
     }
   }
+}
+
+.footer {
+  @extend .text-white;
+  @extend .bg-primary;
 }
 
 .badge-with-close-button {
